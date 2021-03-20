@@ -196,6 +196,7 @@ iframe {
     color: green;
     padding-left: 5px;
     letter-spacing: 2px;
+    font-size: 14px;
 }
 
 .login100-form-title {
@@ -215,7 +216,7 @@ iframe {
   background-size: cover;
   background-position: center;
 
-  padding: 30px 15px 39px 15px;
+  padding: 13px 15px 17px 15px;
 }
 
 .login100-form-title-1 {
