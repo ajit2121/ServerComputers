@@ -45,12 +45,11 @@
 					<div class="validate-input m-b-26">
 						<span class="label-input100">Qualification</span>
 						<div style="padding-top: 12px;padding-left: 8px;">
-							  <label class="radio-inline">
-								<input type="radio" name="Qualification" checked><span style="font-size: 15px;">10th</span>
-							  </label>
-							  <label class="radio-inline">
-								<input type="radio" name="Qualification"><span style="font-size: 15px;">12th</span>
-							  </label>
+							<select name="Qualification" id="cars" required>
+								<option value="">Select Your Qualification</option>
+								<option value="10th">10th</option>
+								<option value="12th">12th</option>
+							  </select>
 						</div>
 					</div>
 					
@@ -85,14 +84,14 @@
 	<script>
 		const scriptURL = 'https://script.google.com/macros/s/AKfycbz6pljZzx_NtYodgKEb5vAxUZGeRJrDMDg-xgaJ5bqiGYler2R2_5XkyVo5Rqnl-0zQ/exec'
 		const form = document.forms['ServerComputerStudentData']
-	  
 		form.addEventListener('submit', e => {
 		  e.preventDefault()
 		  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-			.then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+			.then(response => window.location.href="extrapages/congrats.html")
 			.catch(error => console.error('Error!', error.message))
+			
 		})
-	  </script>
+	</script>
 
 </body>
 </html>
